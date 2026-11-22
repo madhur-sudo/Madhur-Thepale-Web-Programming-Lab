@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Personal Index — create your personal record with seven fields. A beautifully designed form for Web Programming Lab 8.">
+  <title>The Personal Index — New Entry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="index">
+
+  <a href="#entry-form" class="skip-link">Skip to form</a>
+
+  <div class="page-split">
+
+    <!-- ═══════════════════════════════════════════
+         LEFT EDITORIAL PANEL
+    ════════════════════════════════════════════ -->
+    <aside class="panel-editorial" aria-label="Editorial panel">
+
+      <div class="panel-editorial__wordmark">The Personal Index</div>
+
+      <div class="panel-editorial__field-note">Field Note / 001</div>
+
+      <h1 class="panel-editorial__heading">A person,<br>on record.</h1>
+
+      <p class="panel-editorial__sub">Seven fields.<br>One clear record.</p>
+
+      <div class="panel-editorial__number" aria-hidden="true">01</div>
+
+      <hr class="panel-editorial__rule" aria-hidden="true">
+
+      <nav class="panel-index" aria-label="Form sections">
+        <div class="panel-index__item">
+          <span class="panel-index__num">01</span>
+          <span class="panel-index__label">Identity</span>
+          <span class="panel-index__dot panel-index__dot--active"></span>
+        </div>
+        <div class="panel-index__item">
+          <span class="panel-index__num">02</span>
+          <span class="panel-index__label">Contact</span>
+          <span class="panel-index__dot panel-index__dot--active"></span>
+        </div>
+        <div class="panel-index__item">
+          <span class="panel-index__num">03</span>
+          <span class="panel-index__label">Place</span>
+          <span class="panel-index__dot panel-index__dot--active"></span>
+        </div>
+      </nav>
+
+      <div class="panel-editorial__meta">
+        Web Programming&nbsp;/&nbsp;Lab&nbsp;08
+      </div>
+
+    </aside>
+
+    <!-- ═══════════════════════════════════════════
+         RIGHT FORM PANEL
+    ════════════════════════════════════════════ -->
+    <main class="panel-form">
+
+      <!-- Navigation -->
+      <nav class="site-nav" aria-label="Site navigation">
+        <a href="index.html" class="site-nav__wordmark">The Personal Index</a>
+        <div class="site-nav__links">
+          <a href="index.html" class="site-nav__link site-nav__link--active" aria-current="page">New entry</a>
+          <a href="directory.html" class="site-nav__link">Directory</a>
+        </div>
+      </nav>
+
+      <!-- Form area -->
+      <div class="form-main anim-fade-up" id="entry-form-area">
+
+        <!-- Form header -->
+        <header class="form-header">
+          <div class="form-header__entry-label">Entry Form / 01</div>
+          <h2 class="form-header__title">Create a new record</h2>
+          <p class="form-header__desc">
+            Fill in the seven fields below to create a locally saved personal record.
+            Your data stays in this browser — no account or server required.
+          </p>
+        </header>
+
+        <!-- The form -->
+        <form id="entry-form" novalidate autocomplete="on">
+
+          <!-- 01 — IDENTITY -->
+          <section class="form-section" aria-labelledby="section-identity-label">
+            <div class="form-section__header">
+              <span class="form-section__num" aria-hidden="true">01</span>
+              <h3 class="form-section__title" id="section-identity-label">Identity</h3>
+            </div>
+
+            <div class="form-grid">
+
+              <!-- Full name -->
+              <div class="form-group form-group--full">
+                <label class="form-label" for="field-fullname">
+                  Full name
+                  <span class="form-label__required" aria-label="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="field-fullname"
+                  name="fullName"
+                  class="form-input"
+                  autocomplete="name"
+                  placeholder="e.g. Priya Sharma"
+                  required
+                  aria-describedby="err-fullname"
+                  aria-required="true"
+                >
+                <span class="form-error" id="err-fullname" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Gender -->
+              <div class="form-group form-group--full">
+                <fieldset style="border:none;padding:0;margin:0;" aria-required="true" aria-describedby="err-gender">
+                  <legend class="form-label" style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                    Gender
+                    <span class="form-label__required" aria-label="required">*</span>
+                  </legend>
+                  <div class="radio-group">
+                    <label class="radio-option">
+                      <input type="radio" name="gender" value="Male">
+                      Male
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="gender" value="Female">
+                      Female
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="gender" value="Non-binary">
+                      Non-binary
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="gender" value="Prefer not to say">
+                      Prefer not to say
+                    </label>
+                  </div>
+                </fieldset>
+                <span class="form-error" id="err-gender" role="alert" aria-live="polite"></span>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 02 — CONTACT -->
+          <section class="form-section" aria-labelledby="section-contact-label">
+            <div class="form-section__header">
+              <span class="form-section__num" aria-hidden="true">02</span>
+              <h3 class="form-section__title" id="section-contact-label">Contact</h3>
+            </div>
+
+            <div class="form-grid">
+
+              <!-- Mobile -->
+              <div class="form-group">
+                <label class="form-label" for="field-mobile">
+                  Mobile number
+                  <span class="form-label__required" aria-label="required">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="field-mobile"
+                  name="mobile"
+                  class="form-input"
+                  autocomplete="tel"
+                  placeholder="e.g. +91 98765 43210"
+                  required
+                  aria-describedby="err-mobile"
+                  aria-required="true"
+                >
+                <span class="form-error" id="err-mobile" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label class="form-label" for="field-email">
+                  Email ID
+                  <span class="form-label__required" aria-label="required">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="field-email"
+                  name="email"
+                  class="form-input"
+                  autocomplete="email"
+                  placeholder="e.g. priya@example.com"
+                  required
+                  aria-describedby="err-email"
+                  aria-required="true"
+                >
+                <span class="form-error" id="err-email" role="alert" aria-live="polite"></span>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 03 — PLACE -->
+          <section class="form-section" aria-labelledby="section-place-label">
+            <div class="form-section__header">
+              <span class="form-section__num" aria-hidden="true">03</span>
+              <h3 class="form-section__title" id="section-place-label">Place</h3>
+            </div>
+
+            <div class="form-grid">
+
+              <!-- City -->
+              <div class="form-group">
+                <label class="form-label" for="field-city">
+                  City
+                  <span class="form-label__required" aria-label="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="field-city"
+                  name="city"
+                  class="form-input"
+                  autocomplete="address-level2"
+                  placeholder="e.g. Bengaluru"
+                  required
+                  aria-describedby="err-city"
+                  aria-required="true"
+                >
+                <span class="form-error" id="err-city" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- State -->
+              <div class="form-group">
+                <label class="form-label" for="field-state">
+                  State / Region
+                  <span class="form-label__required" aria-label="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="field-state"
+                  name="state"
+                  class="form-input"
+                  autocomplete="address-level1"
+                  placeholder="e.g. Karnataka"
+                  required
+                  aria-describedby="err-state"
+                  aria-required="true"
+                >
+                <span class="form-error" id="err-state" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Country -->
+              <div class="form-group form-group--full">
+                <label class="form-label" for="field-country">
+                  Country
+                  <span class="form-label__required" aria-label="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="field-country"
+                  name="country"
+                  class="form-input"
+                  autocomplete="country-name"
+                  placeholder="e.g. India"
+                  required
+                  aria-describedby="err-country"
+                  aria-required="true"
+                  style="max-width:360px;"
+                >
+                <span class="form-error" id="err-country" role="alert" aria-live="polite"></span>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- SUBMIT -->
+          <div class="form-footer">
+            <div class="form-footer__actions">
+              <button type="submit" class="btn-primary" id="btn-submit">
+                Create record ↗
+              </button>
+            </div>
+            <p class="form-footer__privacy">
+              Stored locally&nbsp;&middot;&nbsp;No account required
+            </p>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <span class="site-footer__left">The Personal Index / Lab 08</span>
+
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

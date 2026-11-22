@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Personal Index — browse all saved records. A searchable directory of locally stored personal records.">
+  <title>Directory — The Personal Index</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="directory">
+
+  <a href="#dir-main" class="skip-link">Skip to directory</a>
+
+  <div class="standalone-page">
+
+    <!-- Navigation -->
+    <nav class="standalone-nav" aria-label="Site navigation">
+      <div class="standalone-nav__inner">
+        <a href="index.html" class="site-nav__wordmark">The Personal Index</a>
+        <div class="site-nav__links">
+          <a href="index.html" class="site-nav__link">New entry</a>
+          <a href="directory.html" class="site-nav__link site-nav__link--active" aria-current="page">Directory</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page header -->
+    <header class="page-header anim-fade-up">
+      <div class="page-header__breadcrumb">
+        <span>The Personal Index</span>
+        <span class="page-header__breadcrumb-sep">/</span>
+        <span>Directory</span>
+      </div>
+      <div class="page-header__meta">
+        Total Entries&nbsp;/&nbsp;<span id="dir-count-num">0</span>
+      </div>
+      <h1 class="page-header__title">People, indexed.</h1>
+      <p class="page-header__desc">
+        A clear overview of every record saved in this browser.
+      </p>
+    </header>
+
+    <!-- Main content -->
+    <main class="page-container anim-fade-up anim-delay-1" id="dir-main">
+
+      <!-- Controls -->
+      <div class="dir-controls">
+        <div class="dir-search-wrap">
+          <span class="dir-search-icon" aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            id="dir-search"
+            class="dir-search"
+            placeholder="Filter by name, email, city, state, or country…"
+            aria-label="Search records"
+            autocomplete="off"
+          >
+        </div>
+        <button type="button" class="btn-secondary" id="btn-clear-all">Clear all</button>
+        <a href="index.html" class="btn-primary">+ New entry</a>
+      </div>
+
+      <!-- No search results -->
+      <div id="dir-no-results" style="display:none;" aria-live="polite">
+        <div class="notice">
+          No records match your search. Try a different name, email, or location.
+        </div>
+      </div>
+
+      <!-- Desktop table -->
+      <div class="dir-table-wrap" id="dir-table-wrap" style="display:none;">
+        <table class="dir-table" aria-label="Directory of saved records">
+          <thead>
+            <tr>
+              <th scope="col">Name &amp; Email</th>
+              <th scope="col">Mobile</th>
+              <th scope="col">Location</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="dir-tbody">
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile card layout -->
+      <div class="dir-card" id="dir-cards" aria-label="Directory cards" aria-live="polite">
+      </div>
+
+      <!-- Empty state -->
+      <div id="dir-empty" aria-live="polite">
+        <div class="empty-state">
+          <div class="empty-state__symbol" aria-hidden="true">—</div>
+          <h2 class="empty-state__title">No records yet.</h2>
+          <p class="empty-state__desc">
+            This directory is empty. Create your first record to see it listed here.
+            All records are stored locally in your browser.
+          </p>
+          <a href="index.html" class="btn-primary">Create the first record ↗</a>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="dir-bottom">
+        <span class="dir-bottom__note">All records stored locally in this browser &middot; No server involved</span>
+        <a href="index.html" class="btn-secondary" style="font-size:0.8125rem;">+ Add another entry</a>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer--page" style="display:flex;align-items:center;justify-content:space-between;">
+        <span class="site-footer__left">The Personal Index / Lab 08</span>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- CLEAR ALL CONFIRMATION DIALOG -->
+  <div class="dialog-overlay" id="dialog-clear" role="dialog" aria-modal="true" aria-labelledby="dialog-clear-title">
+    <div class="dialog">
+      <h2 class="dialog__title" id="dialog-clear-title">Clear all records?</h2>
+      <p class="dialog__desc">
+        This will permanently delete every record saved in this browser.
+        This action cannot be undone.
+      </p>
+      <div class="dialog__actions">
+        <button type="button" class="btn-secondary" id="dialog-clear-cancel">Cancel</button>
+        <button type="button" class="btn-danger" id="dialog-clear-confirm" data-dialog-confirm>Delete all</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="js-toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

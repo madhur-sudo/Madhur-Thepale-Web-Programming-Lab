@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Personal Index — view individual record details.">
+  <title>Record Detail — The Personal Index</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="profile">
+
+  <a href="#profile-content" class="skip-link">Skip to record</a>
+
+  <div class="standalone-page">
+
+    <!-- Navigation -->
+    <nav class="standalone-nav" aria-label="Site navigation">
+      <div class="standalone-nav__inner">
+        <a href="index.html" class="site-nav__wordmark">The Personal Index</a>
+        <div class="site-nav__links">
+          <a href="index.html" class="site-nav__link">New entry</a>
+          <a href="directory.html" class="site-nav__link">Directory</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page header -->
+    <header class="page-header anim-fade-up">
+      <div class="page-header__breadcrumb">
+        <span>The Personal Index</span>
+        <span class="page-header__breadcrumb-sep">/</span>
+        <span>Record</span>
+      </div>
+      <div class="page-header__meta">
+        Record Detail&nbsp;&middot;&nbsp;<span id="profile-record-id">—</span>
+      </div>
+      <h1 class="page-header__title">The details, in full.</h1>
+    </header>
+
+    <!-- Main content -->
+    <main class="page-container" id="main-content">
+
+      <!-- EMPTY STATE -->
+      <div id="profile-empty" style="display:none;" aria-live="polite">
+        <div class="empty-state">
+          <div class="empty-state__symbol" aria-hidden="true">∅</div>
+          <h2 class="empty-state__title">No record found.</h2>
+          <p class="empty-state__desc" id="profile-empty-msg">
+            This record does not exist or may have been deleted.
+          </p>
+          <a href="index.html" class="btn-primary">Create a new record ↗</a>
+        </div>
+      </div>
+
+      <!-- RECORD CONTENT -->
+      <div id="profile-content" style="display:none;" class="anim-fade-up anim-delay-1">
+
+        <div class="record-layout">
+
+          <!-- Primary name -->
+          <div class="record-name-block">
+            <div class="record-name-label">Full Name</div>
+            <div class="record-name" id="profile-fullname">—</div>
+          </div>
+
+          <!-- Sections grid -->
+          <div class="record-sections" role="list">
+
+            <!-- Identity -->
+            <div class="record-section" role="listitem">
+              <div class="record-section__label">01 — Identity</div>
+              <div class="record-field">
+                <div class="record-field__key">Gender</div>
+                <div class="record-field__value" id="profile-gender">—</div>
+              </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="record-section" role="listitem">
+              <div class="record-section__label">02 — Contact</div>
+              <div class="record-field">
+                <div class="record-field__key">Email ID</div>
+                <div class="record-field__value" id="profile-email">—</div>
+              </div>
+              <div class="record-field">
+                <div class="record-field__key">Mobile</div>
+                <div class="record-field__value" id="profile-mobile">—</div>
+              </div>
+            </div>
+
+            <!-- Place -->
+            <div class="record-section record-section--full" role="listitem">
+              <div class="record-section__label">03 — Place</div>
+              <div class="record-place-grid">
+                <div class="record-field">
+                  <div class="record-field__key">City</div>
+                  <div class="record-field__value" id="profile-city">—</div>
+                </div>
+                <div class="record-field">
+                  <div class="record-field__key">State / Region</div>
+                  <div class="record-field__value" id="profile-state">—</div>
+                </div>
+                <div class="record-field">
+                  <div class="record-field__key">Country</div>
+                  <div class="record-field__value" id="profile-country">—</div>
+                </div>
+              </div>
+              <div class="record-field" style="margin-top:16px;">
+                <div class="record-field__key">Full location</div>
+                <div class="record-field__value record-location-line" id="profile-location-full">—</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Actions row -->
+          <div class="record-actions">
+            <a href="index.html" class="btn-secondary">+ New entry</a>
+            <a href="directory.html" class="btn-secondary">View directory</a>
+            <div class="record-actions__spacer"></div>
+            <div class="record-timestamp" id="profile-created-at"></div>
+            <button type="button" class="btn-danger" id="btn-delete">Delete record</button>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer--page" style="display:flex;align-items:center;justify-content:space-between;">
+        <span class="site-footer__left">The Personal Index / Lab 08</span>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- DELETE CONFIRMATION DIALOG -->
+  <div class="dialog-overlay" id="dialog-delete" role="dialog" aria-modal="true" aria-labelledby="dialog-delete-title">
+    <div class="dialog">
+      <h2 class="dialog__title" id="dialog-delete-title">Delete this record?</h2>
+      <p class="dialog__desc">
+        This will permanently remove the record from your browser's local storage.
+        This action cannot be undone.
+      </p>
+      <div class="dialog__actions">
+        <button type="button" class="btn-secondary" id="dialog-cancel">Cancel</button>
+        <button type="button" class="btn-danger" id="dialog-confirm" data-dialog-confirm>Delete permanently</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="js-toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
