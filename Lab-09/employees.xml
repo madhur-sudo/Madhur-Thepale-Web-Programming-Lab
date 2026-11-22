@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+
+    <employee>
+        <id>EMP001</id>
+        <name>Arjun Mehta</name>
+        <department>Engineering</department>
+        <designation>Senior Software Engineer</designation>
+        <email>arjun.mehta@company.com</email>
+        <salary>95000</salary>
+    </employee>
+
+    <employee>
+        <id>EMP002</id>
+        <name>Priya Sharma</name>
+        <department>Design</department>
+        <designation>UI/UX Designer</designation>
+        <email>priya.sharma@company.com</email>
+        <salary>72000</salary>
+    </employee>
+
+    <employee>
+        <id>EMP003</id>
+        <name>Rohan Verma</name>
+        <department>Engineering</department>
+        <designation>Backend Developer</designation>
+        <email>rohan.verma@company.com</email>
+        <salary>88000</salary>
+    </employee>
+
+    <employee>
+        <id>EMP004</id>
+        <name>Sneha Iyer</name>
+        <department>Human Resources</department>
+        <designation>HR Manager</designation>
+        <email>sneha.iyer@company.com</email>
+        <salary>68000</salary>
+    </employee>
+
+    <employee>
+        <id>EMP005</id>
+        <name>Karan Patel</name>
+        <department>Marketing</department>
+        <designation>Marketing Analyst</designation>
+        <email>karan.patel@company.com</email>
+        <salary>61000</salary>
+    </employee>
+
+    <employee>
+        <id>EMP006</id>
+        <name>Ananya Nair</name>
+        <department>Finance</department>
+        <designation>Financial Analyst</designation>
+        <email>ananya.nair@company.com</email>
+        <salary>74000</salary>
+    </employee>
+
+    <employee>
+        <id>EMP007</id>
+        <name>Dev Kapoor</name>
+        <department>Engineering</department>
+        <designation>DevOps Engineer</designation>
+        <email>dev.kapoor@company.com</email>
+        <salary>91000</salary>
+    </employee>
+
+    <employee>
+        <id>EMP008</id>
+        <name>Meera Joshi</name>
+        <department>Design</department>
+        <designation>Graphic Designer</designation>
+        <email>meera.joshi@company.com</email>
+        <salary>58000</salary>
+    </employee>
+
+</employees>
