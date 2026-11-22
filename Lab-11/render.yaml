@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: lab11-login-validation
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: oregon
+    autoDeploy: true
+    healthCheckPath: /health.php
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: lab11-login-validation-db
+          property: connectionString
+databases:
+  - name: lab11-login-validation-db
+    databaseName: lab11_db
+    user: lab11_user
+    plan: 0.1c-256mb
+    postgresMajorVersion: "18"
+    region: oregon

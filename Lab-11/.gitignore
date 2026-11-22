@@ -1,0 +1,31 @@
+# .gitignore — Lab 11 Login Validation
+
+# Never commit environment files or secrets
+.env
+.env.*
+!.env.example
+*.env.local
+*.env.production
+
+# PHP temp / cache
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Composer (not used here, but good practice)
+vendor/
+composer.lock
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Logs
+*.log
+/logs/
+
+# OS files
+.DS_Store
+desktop.ini
