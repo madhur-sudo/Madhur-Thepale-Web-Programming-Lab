@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find the Capital | Web Programming Lab 4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="capital-card" aria-labelledby="page-title">
+      <div class="globe-icon" aria-hidden="true">
+        <span class="latitude latitude-one"></span>
+        <span class="latitude latitude-two"></span>
+        <span class="longitude"></span>
+      </div>
+
+      <p class="eyebrow">Web Programming Lab 4</p>
+      <h1 id="page-title">Find the Capital</h1>
+      <p class="description">Choose a country to discover its capital city.</p>
+
+      <div class="selection-row">
+        <div class="field-group">
+          <label for="countrySelect">Select a country</label>
+          <select id="countrySelect" name="country">
+            <option value="">Choose a country...</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Madagascar">Madagascar</option>
+          </select>
+        </div>
+
+        <span class="arrow" aria-hidden="true">&#8594;</span>
+
+        <section class="result-box" aria-live="polite" aria-labelledby="capital-label">
+          <p id="capital-label" class="result-label">Capital</p>
+          <p id="capital">Select a country</p>
+        </section>
+      </div>
+
+      <p class="footer-note"><span aria-hidden="true">&#9679;</span> 5 countries <span aria-hidden="true">&#9679;</span> 5 capitals</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
