@@ -1,0 +1,24 @@
+# Dependency directories
+vendor/
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / Editor
+.vscode/
+.idea/
+*.code-workspace
+
+# PHP error logs
+*.log
+php_errors.log
+
+# Environment files
+.env
+.env.local
+
+# Compiled or cached assets
+*.cache

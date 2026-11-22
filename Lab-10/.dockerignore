@@ -1,0 +1,7 @@
+# .dockerignore - exclude files that don't belong in the Docker image
+.git
+.gitattributes
+.gitignore
+README.md
+render.yaml
+*.md

@@ -1,0 +1,17 @@
+# =============================================================================
+# Render Blueprint for Everyday
+# Docs: https://render.com/docs/blueprint-spec
+# =============================================================================
+
+services:
+  - type: web
+    name: lab10-php-web-applications
+    runtime: docker
+    plan: free
+    branch: main
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 10000
+    healthCheckPath: /health.php
+    autoDeploy: true

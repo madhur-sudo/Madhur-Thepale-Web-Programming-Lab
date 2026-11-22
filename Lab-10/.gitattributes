@@ -1,0 +1,27 @@
+# Enforce LF line endings for all files in this repository
+* text=auto eol=lf
+
+# Shell scripts MUST have LF (critical for Docker/Linux)
+*.sh text eol=lf
+
+# PHP files
+*.php text eol=lf
+
+# CSS/JS
+*.css text eol=lf
+*.js  text eol=lf
+
+# Markup
+*.html text eol=lf
+*.md   text eol=lf
+*.yaml text eol=lf
+*.yml  text eol=lf
+
+# Docker
+Dockerfile text eol=lf
+
+# Keep binary files untouched
+*.png  binary
+*.jpg  binary
+*.gif  binary
+*.ico  binary
