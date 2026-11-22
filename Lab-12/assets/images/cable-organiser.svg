@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#F5F2EA"/>
+
+  <!-- 6 cable clips arranged in a 3x2 grid pattern -->
+
+  <!-- === CLIP 1 (top left) === -->
+  <g transform="translate(80, 110)">
+    <ellipse cx="0" cy="45" rx="30" ry="6" fill="#242923" opacity="0.1"/>
+    <!-- C-clip body -->
+    <path d="M-18 0 Q-28 0 -28 20 Q-28 40 -18 40 L18 40 Q28 40 28 20 Q28 0 18 0 Z" fill="#344B3B"/>
+    <path d="M-14 4 Q-22 4 -22 20 Q-22 36 -14 36 L14 36 Q22 36 22 20 Q22 4 14 4 Z" fill="#3d5745"/>
+    <!-- Cable channel opening -->
+    <rect x="-28" y="8" width="10" height="24" rx="3" fill="#F5F2EA"/>
+    <!-- Adhesive base -->
+    <rect x="-22" y="38" width="44" height="8" rx="3" fill="#85866B"/>
+    <!-- Cable hint -->
+    <circle cx="0" cy="20" r="8" fill="#242923" opacity="0.15"/>
+    <circle cx="0" cy="20" r="5" fill="#B96F51" opacity="0.6"/>
+  </g>
+
+  <!-- === CLIP 2 (top center) === -->
+  <g transform="translate(200, 110)">
+    <ellipse cx="0" cy="45" rx="30" ry="6" fill="#242923" opacity="0.1"/>
+    <path d="M-18 0 Q-28 0 -28 20 Q-28 40 -18 40 L18 40 Q28 40 28 20 Q28 0 18 0 Z" fill="#B96F51"/>
+    <path d="M-14 4 Q-22 4 -22 20 Q-22 36 -14 36 L14 36 Q22 36 22 20 Q22 4 14 4 Z" fill="#c4825e"/>
+    <rect x="-28" y="8" width="10" height="24" rx="3" fill="#F5F2EA"/>
+    <rect x="-22" y="38" width="44" height="8" rx="3" fill="#85866B"/>
+    <circle cx="0" cy="20" r="8" fill="#242923" opacity="0.15"/>
+    <circle cx="0" cy="20" r="5" fill="#344B3B" opacity="0.6"/>
+  </g>
+
+  <!-- === CLIP 3 (top right) === -->
+  <g transform="translate(320, 110)">
+    <ellipse cx="0" cy="45" rx="30" ry="6" fill="#242923" opacity="0.1"/>
+    <path d="M-18 0 Q-28 0 -28 20 Q-28 40 -18 40 L18 40 Q28 40 28 20 Q28 0 18 0 Z" fill="#85866B"/>
+    <path d="M-14 4 Q-22 4 -22 20 Q-22 36 -14 36 L14 36 Q22 36 22 20 Q22 4 14 4 Z" fill="#979876"/>
+    <rect x="-28" y="8" width="10" height="24" rx="3" fill="#F5F2EA"/>
+    <rect x="-22" y="38" width="44" height="8" rx="3" fill="#85866B"/>
+    <circle cx="0" cy="20" r="8" fill="#242923" opacity="0.15"/>
+    <circle cx="0" cy="20" r="5" fill="#B96F51" opacity="0.6"/>
+  </g>
+
+  <!-- === CLIP 4 (bottom left) === -->
+  <g transform="translate(80, 240)">
+    <ellipse cx="0" cy="45" rx="30" ry="6" fill="#242923" opacity="0.1"/>
+    <path d="M-18 0 Q-28 0 -28 20 Q-28 40 -18 40 L18 40 Q28 40 28 20 Q28 0 18 0 Z" fill="#85866B"/>
+    <path d="M-14 4 Q-22 4 -22 20 Q-22 36 -14 36 L14 36 Q22 36 22 20 Q22 4 14 4 Z" fill="#979876"/>
+    <rect x="-28" y="8" width="10" height="24" rx="3" fill="#F5F2EA"/>
+    <rect x="-22" y="38" width="44" height="8" rx="3" fill="#85866B"/>
+    <circle cx="0" cy="20" r="8" fill="#242923" opacity="0.15"/>
+    <circle cx="0" cy="20" r="5" fill="#344B3B" opacity="0.6"/>
+  </g>
+
+  <!-- === CLIP 5 (bottom center) === -->
+  <g transform="translate(200, 240)">
+    <ellipse cx="0" cy="45" rx="30" ry="6" fill="#242923" opacity="0.1"/>
+    <path d="M-18 0 Q-28 0 -28 20 Q-28 40 -18 40 L18 40 Q28 40 28 20 Q28 0 18 0 Z" fill="#344B3B"/>
+    <path d="M-14 4 Q-22 4 -22 20 Q-22 36 -14 36 L14 36 Q22 36 22 20 Q22 4 14 4 Z" fill="#3d5745"/>
+    <rect x="-28" y="8" width="10" height="24" rx="3" fill="#F5F2EA"/>
+    <rect x="-22" y="38" width="44" height="8" rx="3" fill="#85866B"/>
+    <circle cx="0" cy="20" r="8" fill="#242923" opacity="0.15"/>
+    <circle cx="0" cy="20" r="5" fill="#B96F51" opacity="0.6"/>
+  </g>
+
+  <!-- === CLIP 6 (bottom right) === -->
+  <g transform="translate(320, 240)">
+    <ellipse cx="0" cy="45" rx="30" ry="6" fill="#242923" opacity="0.1"/>
+    <path d="M-18 0 Q-28 0 -28 20 Q-28 40 -18 40 L18 40 Q28 40 28 20 Q28 0 18 0 Z" fill="#B96F51"/>
+    <path d="M-14 4 Q-22 4 -22 20 Q-22 36 -14 36 L14 36 Q22 36 22 20 Q22 4 14 4 Z" fill="#c4825e"/>
+    <rect x="-28" y="8" width="10" height="24" rx="3" fill="#F5F2EA"/>
+    <rect x="-22" y="38" width="44" height="8" rx="3" fill="#85866B"/>
+    <circle cx="0" cy="20" r="8" fill="#242923" opacity="0.15"/>
+    <circle cx="0" cy="20" r="5" fill="#344B3B" opacity="0.6"/>
+  </g>
+
+  <!-- Sample cable running through clips (decorative) -->
+  <path d="M80 130 Q200 115 320 130" stroke="#242923" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.15"/>
+  <path d="M80 260 Q200 245 320 260" stroke="#242923" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.15"/>
+</svg>

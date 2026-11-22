@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Placed — Morrow Supply</title>
+  <meta name="description" content="Your Morrow Supply demo order has been placed." />
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="stylesheet" href="./css/style.css?v=2" />
+</head>
+<body class="page-order-success">
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+
+      <a href="./index.html" class="nav-logo" aria-label="Morrow Supply home">
+        <span class="logo-name">MORROW SUPPLY</span>
+        <span class="logo-tagline">Useful things. Chosen well.</span>
+      </a>
+
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="./index.html" class="nav-link">Home</a></li>
+        <li><a href="./shop.html" class="nav-link">Shop</a></li>
+        <li><a href="./about.html" class="nav-link">About</a></li>
+        <li><a href="./contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <form class="nav-search" role="search" action="./shop.html" method="get">
+        <label for="nav-search-input" class="sr-only">Search products</label>
+        <input type="search" id="nav-search-input" name="q" class="nav-search-input" placeholder="Search products…" autocomplete="off" />
+        <button type="submit" class="nav-search-btn" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </form>
+
+      <a href="./cart.html" class="nav-cart" aria-label="View cart">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M2 2h2l2.4 10.8a1 1 0 0 0 1 .7h8.2a1 1 0 0 0 1-.8L18 7H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="8" cy="17" r="1" fill="currentColor"/>
+          <circle cx="15" cy="17" r="1" fill="currentColor"/>
+        </svg>
+        <span class="cart-count" id="cart-count" hidden>0</span>
+      </a>
+
+      <button class="nav-hamburger" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Success content — JS fills #order-success-content -->
+      <div id="order-success-content" class="order-success-wrapper" aria-live="polite">
+        <!-- Loading state; replaced by JS -->
+        <div class="loading-state">
+          <div class="loading-spinner" aria-hidden="true"></div>
+          <p>Loading your order…</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <div class="footer-col footer-brand">
+        <span class="footer-logo">MORROW SUPPLY</span>
+        <p class="footer-tagline">Useful things. Chosen well.</p>
+        <p class="footer-blurb">Quality workspace and tech accessories for everyday use in India. Shipped from Bengaluru.</p>
+      </div>
+
+      <nav class="footer-col footer-links" aria-label="Footer navigation">
+        <h3 class="footer-heading">Navigate</h3>
+        <ul role="list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./cart.html">Cart</a></li>
+        </ul>
+      </nav>
+
+      <address class="footer-col footer-contact">
+        <h3 class="footer-heading">Get in touch</h3>
+        <ul role="list">
+          <li><a href="mailto:hello@morrowsupply.in">hello@morrowsupply.in</a></li>
+          <li>Monday – Friday, 10am – 6pm IST</li>
+          <li>Bengaluru, Karnataka</li>
+        </ul>
+      </address>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Morrow Supply. All prices in Indian Rupees (₹).</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+  <script>
+    'use strict';
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var wrapper = document.getElementById('order-success-content');
+
+      // Read order from sessionStorage
+      var raw;
+      try {
+        raw = sessionStorage.getItem('morrow_order');
+      } catch (e) {
+        window.location.replace('./index.html');
+        return;
+      }
+      if (!raw) {
+        // No order found — redirect to home
+        window.location.replace('./index.html');
+        return;
+      }
+
+      var order;
+      try {
+        order = JSON.parse(raw);
+      } catch (e) {
+        window.location.replace('./index.html');
+        return;
+      }
+
+      var validOrder = order && typeof order === 'object' &&
+        typeof order.orderSuffix === 'string' && order.orderSuffix.length >= 6 &&
+        typeof order.customerName === 'string' && order.customerName.trim().length >= 2 &&
+        typeof order.dateFormatted === 'string' && Array.isArray(order.items) && order.items.length > 0 &&
+        order.items.every(function (item) {
+          return item && typeof item.name === 'string' && item.name.trim() &&
+            Number.isSafeInteger(item.qty) && item.qty > 0 && typeof item.lineTotal === 'string';
+        }) && Number.isFinite(order.subtotal) && order.subtotal >= 0 &&
+        (order.shipping === 0 || order.shipping === 99) && order.total === order.subtotal + order.shipping &&
+        typeof order.subtotalFormatted === 'string' && typeof order.shippingFormatted === 'string' &&
+        typeof order.totalFormatted === 'string';
+      if (!validOrder) {
+        window.location.replace('./index.html');
+        return;
+      }
+
+      // Render order summary
+      var itemsHTML = '';
+      (order.items || []).forEach(function (item) {
+        itemsHTML += '<li class="success-item">' +
+          '<span class="success-item-name">' + escapeText(item.name) + '</span>' +
+          '<span class="success-item-qty">× ' + item.qty + '</span>' +
+          '<span class="success-item-price">' + escapeText(item.lineTotal) + '</span>' +
+        '</li>';
+      });
+
+      var shipping = order.shipping === 0
+        ? '<span class="text-free-delivery">Free</span>'
+        : escapeText(order.shippingFormatted || ('₹' + order.shipping));
+
+      wrapper.innerHTML =
+        '<div class="success-card">' +
+
+          '<div class="success-icon-wrap" aria-hidden="true">' +
+            '<svg class="success-checkmark" width="56" height="56" viewBox="0 0 56 56" fill="none" role="img" aria-label="Order placed successfully">' +
+              '<circle cx="28" cy="28" r="27" fill="#344B3B" stroke="#344B3B" stroke-width="1"/>' +
+              '<path d="M17 28.5l8 8 14-16" stroke="#F5F2EA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+            '</svg>' +
+          '</div>' +
+
+          '<h1 class="success-heading">Order Placed!</h1>' +
+          '<p class="success-thanks">Thank you, ' + escapeText(order.customerName) + '!</p>' +
+
+          '<div class="success-meta">' +
+            '<div class="success-meta-row">' +
+              '<span class="success-meta-label">Order number</span>' +
+              '<span class="success-meta-value success-order-number">MS-' + escapeText(order.orderSuffix) + '</span>' +
+            '</div>' +
+            '<div class="success-meta-row">' +
+              '<span class="success-meta-label">Date &amp; time</span>' +
+              '<span class="success-meta-value">' + escapeText(order.dateFormatted) + '</span>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="success-items-section">' +
+            '<h2 class="success-section-title">Items Ordered</h2>' +
+            '<ul class="success-items-list" role="list">' + itemsHTML + '</ul>' +
+          '</div>' +
+
+          '<dl class="summary-list success-totals">' +
+            '<div class="summary-row">' +
+              '<dt>Subtotal</dt>' +
+              '<dd>' + escapeText(order.subtotalFormatted) + '</dd>' +
+            '</div>' +
+            '<div class="summary-row">' +
+              '<dt>Delivery</dt>' +
+              '<dd>' + shipping + '</dd>' +
+            '</div>' +
+            '<div class="summary-row summary-row--total">' +
+              '<dt>Order Total</dt>' +
+              '<dd>' + escapeText(order.totalFormatted) + '</dd>' +
+            '</div>' +
+          '</dl>' +
+
+          '<p class="success-demo-note">' +
+            'This was a demo order. No payment was processed and no order will be fulfilled.' +
+          '</p>' +
+
+          '<a href="./shop.html" class="btn btn-primary">Continue Shopping</a>' +
+
+        '</div>';
+
+      // Helper: HTML-escape a string safely
+      function escapeText(str) {
+        if (str == null) return '';
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+    });
+  </script>
+
+</body>
+</html>

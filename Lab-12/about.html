@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Morrow Supply</title>
+  <meta name="description" content="Morrow Supply is an Indian tech and workspace accessories retailer. We test what we sell and stock only what works." />
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="stylesheet" href="./css/style.css?v=2" />
+</head>
+<body class="page-about">
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+
+      <!-- Logo -->
+      <a href="./index.html" class="nav-logo" aria-label="Morrow Supply home">
+        <span class="logo-name">MORROW SUPPLY</span>
+        <span class="logo-tagline">Useful things. Chosen well.</span>
+      </a>
+
+      <!-- Primary nav links -->
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="./index.html" class="nav-link" data-page="home">Home</a></li>
+        <li><a href="./shop.html" class="nav-link" data-page="shop">Shop</a></li>
+        <li><a href="./about.html" class="nav-link" data-page="about">About</a></li>
+        <li><a href="./contact.html" class="nav-link" data-page="contact">Contact</a></li>
+      </ul>
+
+      <!-- Search -->
+      <form class="nav-search" role="search" action="./shop.html" method="get">
+        <label for="nav-search-input" class="sr-only">Search products</label>
+        <input
+          type="search"
+          id="nav-search-input"
+          name="q"
+          class="nav-search-input"
+          placeholder="Search products…"
+          autocomplete="off"
+        />
+        <button type="submit" class="nav-search-btn" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Cart -->
+      <a href="./cart.html" class="nav-cart" aria-label="View cart">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M2 2h2l2.4 10.8a1 1 0 0 0 1 .7h8.2a1 1 0 0 0 1-.8L18 7H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="8" cy="17" r="1" fill="currentColor"/>
+          <circle cx="15" cy="17" r="1" fill="currentColor"/>
+        </svg>
+        <span class="cart-count" id="cart-count" hidden>0</span>
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button class="nav-hamburger" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="about-hero" aria-labelledby="about-hero-heading">
+      <div class="container">
+        <h1 class="about-hero-heading" id="about-hero-heading">About Morrow Supply</h1>
+        <p class="about-hero-lead">
+          We sell things that work, backed by people who actually tested them.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== BRAND PHILOSOPHY ===================== -->
+    <section class="section about-philosophy" aria-labelledby="philosophy-heading">
+      <div class="container about-philosophy-inner">
+
+        <!-- Left: pullquote -->
+        <div class="about-pullquote-wrap">
+          <blockquote class="about-pullquote">
+            "Finding decent desk gear in India without sifting through endless
+            marketplace listings was harder than it should be."
+          </blockquote>
+        </div>
+
+        <!-- Right: paragraphs -->
+        <div class="about-philosophy-text" id="philosophy-heading">
+          <h2 class="about-philosophy-heading">Why we exist</h2>
+
+          <p>
+            Morrow Supply started out of frustration. Not the kind that makes
+            for a tidy founding story — just the ordinary kind. We wanted good
+            keyboards, decent speakers, and a laptop stand that didn't wobble.
+            What we found instead was a lot of choices between cheap-and-breaks-fast
+            and imported-and-expensive-for-no-clear-reason.
+          </p>
+
+          <p>
+            So we decided to do it differently. We test things before we sell them.
+            We don't list a product because a supplier is offering a good margin —
+            we list it because we've used it and would use it again. The range stays
+            small on purpose. We'd rather carry thirty things confidently than three
+            hundred things just to fill a catalogue.
+          </p>
+
+          <p>
+            Everything ships from Bengaluru. Orders above ₹2,500 ship free.
+            If something arrives broken or wrong, we fix it — no forms,
+            no waiting, no arguments.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== WHAT WE CARRY ===================== -->
+    <section class="section about-categories" aria-labelledby="categories-heading">
+      <div class="container">
+        <h2 class="section-title" id="categories-heading">What we carry</h2>
+        <p class="about-categories-intro">
+          Six categories, chosen because they cover the things most people need
+          when they're setting up or improving a desk.
+        </p>
+
+        <ul class="about-categories-grid" role="list">
+
+          <li class="about-category-block">
+            <h3 class="about-category-name">Peripherals</h3>
+            <p class="about-category-desc">
+              Mice and keyboards are the two things you touch most on a computer,
+              so it's worth getting them right. We carry wired and wireless options
+              across a price range that doesn't require a loan. Mechanical keyboards
+              only where the switch quality is actually worth it.
+            </p>
+          </li>
+
+          <li class="about-category-block">
+            <h3 class="about-category-name">Audio</h3>
+            <p class="about-category-desc">
+              Headphones for focused work and speakers for the room. We test for
+              call quality as much as music quality because most people use both.
+              Nothing in our audio range is chosen for bass boost numbers;
+              we care more about whether the thing is comfortable to wear for six hours.
+            </p>
+          </li>
+
+          <li class="about-category-block">
+            <h3 class="about-category-name">Lighting</h3>
+            <p class="about-category-desc">
+              Desk lamps that give you clean, adjustable light without flickering
+              or producing an unpleasant colour temperature. Eye strain is real;
+              a decent lamp is one of the cheaper ways to fix it. We've skipped
+              anything that felt cheap in the hand or inconsistent in the light.
+            </p>
+          </li>
+
+          <li class="about-category-block">
+            <h3 class="about-category-name">Laptop Accessories</h3>
+            <p class="about-category-desc">
+              Stands, hubs, and sleeves. A laptop stand costs about ₹1,900 here
+              and probably saves you a physio visit. The USB-C hubs we carry have
+              all been tested for heat management, because a hub that gets too hot
+              is a hub that breaks your work. Sleeves fit actual laptop sizes,
+              not just what the manufacturer listed.
+            </p>
+          </li>
+
+          <li class="about-category-block">
+            <h3 class="about-category-name">Desk Accessories</h3>
+            <p class="about-category-desc">
+              Desk mats, cable organisers, and the small things that stop a desk
+              from feeling chaotic. This is the category where we say the most
+              honest thing: a lot of this gear exists elsewhere for less, but ours
+              is sized properly, made of materials that last, and won't have you
+              buying a replacement in four months.
+            </p>
+          </li>
+
+          <li class="about-category-block">
+            <h3 class="about-category-name">Everyday Tech</h3>
+            <p class="about-category-desc">
+              The practical connective tissue of a modern setup — USB-C hubs,
+              cable management, charging solutions, and the stuff you only notice
+              when it stops working. We try to carry items that are genuinely
+              useful rather than technically impressive.
+            </p>
+          </li>
+
+        </ul>
+
+        <div class="about-cta-wrap">
+          <a href="./shop.html" class="btn btn-primary">Browse the full range</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <!-- Col 1: Brand -->
+      <div class="footer-col footer-brand">
+        <span class="footer-logo">MORROW SUPPLY</span>
+        <p class="footer-tagline">Useful things. Chosen well.</p>
+        <p class="footer-blurb">
+          Quality workspace and tech accessories for everyday use in India.
+          Shipped from Bengaluru.
+        </p>
+      </div>
+
+      <!-- Col 2: Links -->
+      <nav class="footer-col footer-links" aria-label="Footer navigation">
+        <h3 class="footer-heading">Navigate</h3>
+        <ul role="list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./cart.html">Cart</a></li>
+        </ul>
+      </nav>
+
+      <!-- Col 3: Contact -->
+      <address class="footer-col footer-contact">
+        <h3 class="footer-heading">Get in touch</h3>
+        <ul role="list">
+          <li>
+            <a href="mailto:hello@morrowsupply.in">hello@morrowsupply.in</a>
+          </li>
+          <li>Monday – Friday, 10am – 6pm IST</li>
+          <li>Bengaluru, Karnataka</li>
+        </ul>
+      </address>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Morrow Supply. All prices in Indian Rupees (₹).</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+
+</body>
+</html>

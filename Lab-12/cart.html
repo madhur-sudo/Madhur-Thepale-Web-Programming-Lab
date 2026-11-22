@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart — Morrow Supply</title>
+  <meta name="description" content="Review your cart and proceed to checkout at Morrow Supply." />
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="stylesheet" href="./css/style.css?v=2" />
+</head>
+<body class="page-cart">
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+
+      <!-- Logo -->
+      <a href="./index.html" class="nav-logo" aria-label="Morrow Supply home">
+        <span class="logo-name">MORROW SUPPLY</span>
+        <span class="logo-tagline">Useful things. Chosen well.</span>
+      </a>
+
+      <!-- Primary nav links -->
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="./index.html" class="nav-link">Home</a></li>
+        <li><a href="./shop.html" class="nav-link">Shop</a></li>
+        <li><a href="./about.html" class="nav-link">About</a></li>
+        <li><a href="./contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Search -->
+      <form class="nav-search" role="search" action="./shop.html" method="get">
+        <label for="nav-search-input" class="sr-only">Search products</label>
+        <input
+          type="search"
+          id="nav-search-input"
+          name="q"
+          class="nav-search-input"
+          placeholder="Search products…"
+          autocomplete="off"
+        />
+        <button type="submit" class="nav-search-btn" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Cart -->
+      <a href="./cart.html" class="nav-cart" aria-label="View cart" aria-current="page">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M2 2h2l2.4 10.8a1 1 0 0 0 1 .7h8.2a1 1 0 0 0 1-.8L18 7H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="8" cy="17" r="1" fill="currentColor"/>
+          <circle cx="15" cy="17" r="1" fill="currentColor"/>
+        </svg>
+        <span class="cart-count" id="cart-count" hidden>0</span>
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button class="nav-hamburger" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 class="page-title">Your Cart</h1>
+
+      <!-- Cart layout: items (left) + summary sidebar (right) -->
+      <div class="cart-layout" id="cart-layout">
+
+        <!-- Cart items column -->
+        <section class="cart-items-col" aria-label="Cart items">
+          <div id="cart-items" aria-live="polite">
+            <!-- JS renders cart rows or empty state here -->
+            <div class="loading-state" id="cart-loading" aria-label="Loading cart">
+              <div class="loading-spinner" aria-hidden="true"></div>
+              <p>Loading your cart…</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Order summary sidebar -->
+        <aside class="cart-summary-col" aria-label="Order summary" id="cart-summary-sidebar">
+          <div class="order-summary-card">
+            <h2 class="summary-heading">Order Summary</h2>
+
+            <dl class="summary-list">
+              <div class="summary-row">
+                <dt>Subtotal</dt>
+                <dd id="summary-subtotal">—</dd>
+              </div>
+              <div class="summary-row">
+                <dt>Delivery</dt>
+                <dd id="summary-shipping">—</dd>
+              </div>
+              <div class="summary-row summary-row--total">
+                <dt>Total</dt>
+                <dd id="summary-total">—</dd>
+              </div>
+            </dl>
+
+            <p class="delivery-note" id="delivery-note" aria-live="polite"></p>
+
+            <a href="./checkout.html" class="btn btn-primary btn-block" id="checkout-btn">
+              Proceed to Checkout
+            </a>
+            <a href="./shop.html" class="btn btn-outline btn-block mt-sm">
+              Continue Shopping
+            </a>
+          </div>
+        </aside>
+
+      </div><!-- /.cart-layout -->
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <div class="footer-col footer-brand">
+        <span class="footer-logo">MORROW SUPPLY</span>
+        <p class="footer-tagline">Useful things. Chosen well.</p>
+        <p class="footer-blurb">Quality workspace and tech accessories for everyday use in India. Shipped from Bengaluru.</p>
+      </div>
+
+      <nav class="footer-col footer-links" aria-label="Footer navigation">
+        <h3 class="footer-heading">Navigate</h3>
+        <ul role="list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./cart.html">Cart</a></li>
+        </ul>
+      </nav>
+
+      <address class="footer-col footer-contact">
+        <h3 class="footer-heading">Get in touch</h3>
+        <ul role="list">
+          <li><a href="mailto:hello@morrowsupply.in">hello@morrowsupply.in</a></li>
+          <li>Monday – Friday, 10am – 6pm IST</li>
+          <li>Bengaluru, Karnataka</li>
+        </ul>
+      </address>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Morrow Supply. All prices in Indian Rupees (₹).</p>
+    </div>
+  </footer>
+
+  <!-- Scripts (main.js first — provides globals used by products.js and cart.js) -->
+  <script src="./js/main.js"></script>
+  <script src="./js/products.js"></script>
+  <script src="./js/cart.js"></script>
+
+</body>
+</html>

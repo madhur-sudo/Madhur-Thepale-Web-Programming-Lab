@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#F5F2EA"/>
+
+  <!-- Shadow (perspective) -->
+  <ellipse cx="200" cy="306" rx="155" ry="14" fill="#242923" opacity="0.12"/>
+
+  <!-- Desk mat body in slight perspective -->
+  <!-- Back edge (top of mat) -->
+  <path d="M50 220 L350 220 L350 230 L50 230 Z" fill="#2d3a2f"/>
+  <!-- Main mat surface -->
+  <path d="M50 230 L350 230 L370 300 L30 300 Z" fill="#344B3B"/>
+  <!-- Surface highlight (light catch) -->
+  <path d="M52 232 L348 232 L366 296 L34 296 Z" fill="#3d5745"/>
+
+  <!-- Stitched border (inset) -->
+  <!-- Top stitch line -->
+  <path d="M68 236 L332 236" stroke="#85866B" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.7"/>
+  <!-- Bottom stitch line -->
+  <path d="M50 290 L350 290" stroke="#85866B" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.7"/>
+  <!-- Left stitch line -->
+  <path d="M54 234 L38 294" stroke="#85866B" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.7"/>
+  <!-- Right stitch line -->
+  <path d="M346 234 L362 294" stroke="#85866B" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.7"/>
+
+  <!-- Stitch corner reinforcements -->
+  <circle cx="68" cy="236" r="2.5" fill="#B96F51" opacity="0.7"/>
+  <circle cx="332" cy="236" r="2.5" fill="#B96F51" opacity="0.7"/>
+
+  <!-- Mat surface subtle texture lines -->
+  <g stroke="#2d3a2f" stroke-width="0.8" opacity="0.3">
+    <line x1="80" y1="244" x2="320" y2="244"/>
+    <line x1="82" y1="254" x2="318" y2="254"/>
+    <line x1="84" y1="264" x2="316" y2="264"/>
+    <line x1="86" y1="274" x2="314" y2="274"/>
+    <line x1="88" y1="284" x2="312" y2="284"/>
+  </g>
+
+  <!-- Anti-slip rubber base visible at front edge -->
+  <path d="M38 298 L362 298 L366 302 L34 302 Z" fill="#242923"/>
+  <path d="M40 298 L360 298 L363 300 L37 300 Z" fill="#1a2219" opacity="0.8"/>
+
+  <!-- Brand watermark / logo area -->
+  <rect x="174" y="260" width="52" height="14" rx="2" fill="#344B3B" opacity="0.6"/>
+  <rect x="176" y="262" width="48" height="10" rx="1" fill="#85866B" opacity="0.3"/>
+  <text x="200" y="271" font-family="Georgia, serif" font-size="7" fill="#85866B" text-anchor="middle" opacity="0.7">MORROW</text>
+
+  <!-- Rolled corner (top left) showing the mat thickness -->
+  <path d="M50 220 Q46 218 46 222 Q46 228 50 230" fill="#2d3a2f" stroke="#242923" stroke-width="0.5"/>
+  <path d="M350 220 Q354 218 354 222 Q354 228 350 230" fill="#2d3a2f" stroke="#242923" stroke-width="0.5"/>
+</svg>

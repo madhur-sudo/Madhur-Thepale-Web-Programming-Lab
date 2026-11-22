@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+
+  <product>
+    <id>P001</id>
+    <name>Arc Wireless Mouse</name>
+    <category>Peripherals</category>
+    <price>1499</price>
+    <image>assets/images/wireless-mouse.svg</image>
+    <shortDescription>Silent, ergonomic wireless mouse with 18-month battery life.</shortDescription>
+    <description>The Arc Wireless Mouse uses a 2.4 GHz nano receiver that plugs directly into your laptop and stores inside the mouse when not in use. Its contoured right-hand shape reduces wrist strain during long work sessions, with a rubberised side grip that keeps it steady even on glass desks. The scroll wheel has a tactile notch every 15 degrees and the two main buttons are rated for 10 million clicks.</description>
+    <stock>18</stock>
+    <featured>true</featured>
+    <badge>Popular</badge>
+  </product>
+
+  <product>
+    <id>P002</id>
+    <name>Craft Mechanical Keyboard</name>
+    <category>Peripherals</category>
+    <price>4299</price>
+    <image>assets/images/mechanical-keyboard.svg</image>
+    <shortDescription>Compact TKL mechanical keyboard with Cherry MX Brown switches.</shortDescription>
+    <description>The Craft Mechanical Keyboard ships in a tenkeyless layout, cutting 40% of the footprint so your mouse sits closer to the board without reaching. Cherry MX Brown switches give audible tactile feedback without the sharp click that annoys open-plan offices, and each keycap is double-shot PBT so the legends will not fade in a year. The aluminium top plate adds enough mass that the board stays put even during fast typing sessions.</description>
+    <stock>12</stock>
+    <featured>true</featured>
+    <badge>Staff Pick</badge>
+  </product>
+
+  <product>
+    <id>P003</id>
+    <name>Alto Laptop Stand</name>
+    <category>Laptop Accessories</category>
+    <price>1899</price>
+    <image>assets/images/laptop-stand.svg</image>
+    <shortDescription>Foldable aluminium laptop stand, adjustable from 15° to 50°.</shortDescription>
+    <description>The Alto Stand is machined from a single sheet of aluminium alloy and folds flat to 8 mm — thin enough to slip into a laptop sleeve without bulk. Six angle notches between 15° and 50° let you pick a viewing height that works whether you are sitting at a desk or standing at a counter. Silicone pads on the arms and base grip the laptop and table surface without leaving marks.</description>
+    <stock>22</stock>
+    <featured>false</featured>
+    <badge></badge>
+  </product>
+
+  <product>
+    <id>P004</id>
+    <name>Nori Bluetooth Speaker</name>
+    <category>Audio</category>
+    <price>2999</price>
+    <image>assets/images/bluetooth-speaker.svg</image>
+    <shortDescription>Compact 20W Bluetooth 5.3 speaker with 14-hour playtime.</shortDescription>
+    <description>The Nori puts out 20 W through two full-range drivers and a passive radiator that handles bass down to around 60 Hz, which is enough to fill a medium room without distorting. Bluetooth 5.3 maintains a stable connection up to 12 metres and the speaker pairs to two devices simultaneously, so switching from your laptop to your phone is a single tap. The rubberised shell is IPX5-rated, meaning it handles splashes from a kitchen counter or a light rain without issue.</description>
+    <stock>15</stock>
+    <featured>true</featured>
+    <badge>New Arrival</badge>
+  </product>
+
+  <product>
+    <id>P005</id>
+    <name>Pivot USB-C Hub 7-in-1</name>
+    <category>Everyday Tech</category>
+    <price>2499</price>
+    <image>assets/images/usb-hub.svg</image>
+    <shortDescription>7-port USB-C hub with 4K HDMI, 100W pass-through, and SD card slots.</shortDescription>
+    <description>The Pivot Hub adds two USB-A 3.0 ports, one USB-C data port, HDMI out at 4K 30 Hz, a full-size SD slot, a microSD slot, and 100 W USB-C power pass-through — all from one cable. The aluminium shell dissipates heat well enough that sustained file transfers do not throttle speeds after a few minutes, which is a common complaint with cheaper plastic hubs. It is bus-powered from the host device, so there is no separate power brick to carry.</description>
+    <stock>20</stock>
+    <featured>false</featured>
+    <badge></badge>
+  </product>
+
+  <product>
+    <id>P006</id>
+    <name>Luna Desk Lamp</name>
+    <category>Workspace Lighting</category>
+    <price>1799</price>
+    <image>assets/images/desk-lamp.svg</image>
+    <shortDescription>LED desk lamp with stepless dimming and 5 colour temperatures.</shortDescription>
+    <description>The Luna uses a 10 W LED panel rated at 800 lux at 40 cm, which is bright enough to read paper documents without straining. A touch slider on the base adjusts brightness from 10% to 100% without stepping, and a separate button cycles through five colour temperatures from 2700 K warm white to 6500 K daylight. The arm extends to 45 cm and swivels 180 degrees so you can direct light across a wide desk surface.</description>
+    <stock>17</stock>
+    <featured>false</featured>
+    <badge></badge>
+  </product>
+
+  <product>
+    <id>P007</id>
+    <name>Terrain Desk Mat (XL)</name>
+    <category>Desk Accessories</category>
+    <price>999</price>
+    <image>assets/images/desk-mat.svg</image>
+    <shortDescription>900×400 mm XL desk mat with stitched edges and non-slip base.</shortDescription>
+    <description>The Terrain Mat covers a 900 by 400 mm area, large enough to hold a keyboard, mouse, and a small notepad side by side. The surface is a dense micro-weave fabric that gives consistent mouse tracking across its entire area, including the edges. The base is 3 mm natural rubber that grips the desk without adhesive, and all four edges are machine-stitched so they will not fray with daily use.</description>
+    <stock>25</stock>
+    <featured>false</featured>
+    <badge></badge>
+  </product>
+
+  <product>
+    <id>P008</id>
+    <name>Loop Cable Organiser Set</name>
+    <category>Desk Accessories</category>
+    <price>499</price>
+    <image>assets/images/cable-organiser.svg</image>
+    <shortDescription>Set of 10 silicone cable clips in two sizes for desk and wall.</shortDescription>
+    <description>The Loop set includes six small clips for thin cables like phone chargers and six larger clips for USB-C and power bricks, all in a matching muted grey silicone. Each clip has a self-adhesive pad on the back that bonds to wood, metal, and most plastics without leaving residue when removed cleanly. The silicone construction means the clips flex rather than snap when you route a cable at an angle, which is what usually breaks the cheaper plastic versions.</description>
+    <stock>24</stock>
+    <featured>false</featured>
+    <badge></badge>
+  </product>
+
+  <product>
+    <id>P009</id>
+    <name>Studio Headphones</name>
+    <category>Audio</category>
+    <price>3499</price>
+    <image>assets/images/headphones.svg</image>
+    <shortDescription>Over-ear studio headphones with 40 mm drivers and detachable cable.</shortDescription>
+    <description>The Studio Headphones use closed-back 40 mm dynamic drivers tuned for a flat frequency response from 20 Hz to 20 kHz, which makes them useful for both music listening and reference mixing work. The ear cushions are covered in protein leather over memory foam and the headband has 10 size positions, so they fit most head sizes without clamping uncomfortably. A 1.5 m straight cable is included as standard, plus a 3 m coiled cable for studio setups, and both use the same 3.5 mm TRS jack.</description>
+    <stock>10</stock>
+    <featured>true</featured>
+    <badge>Staff Pick</badge>
+  </product>
+
+  <product>
+    <id>P010</id>
+    <name>Carry Laptop Sleeve (15")</name>
+    <category>Laptop Accessories</category>
+    <price>1299</price>
+    <image>assets/images/laptop-sleeve.svg</image>
+    <shortDescription>Slim felt laptop sleeve for 15-inch laptops with accessory pocket.</shortDescription>
+    <description>The Carry Sleeve is made from 5 mm compressed wool felt that absorbs minor knocks without adding the stiff bulk of a hard-shell case. It fits laptops up to 15 inches with a maximum body thickness of 22 mm, which covers most ultrabooks and standard MacBook Pro models. A front zip pocket fits a charger cable, a small power bank, and a few cards without making the sleeve look bulky from the outside.</description>
+    <stock>19</stock>
+    <featured>false</featured>
+    <badge></badge>
+  </product>
+
+</products>

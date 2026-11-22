@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#F5F2EA"/>
+
+  <!-- Shadow -->
+  <ellipse cx="195" cy="345" rx="80" ry="12" fill="#242923" opacity="0.12"/>
+
+  <!-- Base -->
+  <ellipse cx="195" cy="342" rx="68" ry="12" fill="#344B3B"/>
+  <ellipse cx="195" cy="338" rx="68" ry="12" fill="#85866B"/>
+  <ellipse cx="195" cy="335" rx="66" ry="10" fill="#344B3B"/>
+  <!-- Base top ring -->
+  <ellipse cx="195" cy="332" rx="40" ry="7" fill="#2d3a2f"/>
+  <ellipse cx="195" cy="330" rx="40" ry="7" fill="#344B3B"/>
+
+  <!-- Touch dimmer ring on base -->
+  <ellipse cx="195" cy="330" rx="28" ry="5" fill="#242923" opacity="0.4"/>
+  <ellipse cx="195" cy="328" rx="28" ry="5" fill="#344B3B"/>
+  <!-- LED ring indicator -->
+  <ellipse cx="195" cy="328" rx="20" ry="3.5" fill="none" stroke="#B96F51" stroke-width="2" opacity="0.8"/>
+
+  <!-- Main vertical arm -->
+  <rect x="190" y="210" width="10" height="120" rx="5" fill="#344B3B"/>
+  <rect x="191" y="210" width="4" height="120" rx="2" fill="#85866B" opacity="0.5"/>
+
+  <!-- Lower arm hinge -->
+  <circle cx="195" cy="210" r="10" fill="#242923"/>
+  <circle cx="195" cy="210" r="7" fill="#85866B"/>
+  <circle cx="195" cy="210" r="3" fill="#242923"/>
+
+  <!-- Articulated arm - lower segment -->
+  <path d="M195 210 L230 155" stroke="#344B3B" stroke-width="10" stroke-linecap="round"/>
+  <path d="M196 209 L231 154" stroke="#85866B" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Upper arm hinge -->
+  <circle cx="230" cy="155" r="9" fill="#242923"/>
+  <circle cx="230" cy="155" r="6" fill="#85866B"/>
+  <circle cx="230" cy="155" r="2.5" fill="#242923"/>
+
+  <!-- Upper arm segment -->
+  <path d="M230 155 L200 105" stroke="#344B3B" stroke-width="10" stroke-linecap="round"/>
+  <path d="M231 155 L201 105" stroke="#85866B" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Lamp shade assembly -->
+  <!-- Shade neck -->
+  <rect x="195" y="98" width="10" height="14" rx="4" fill="#344B3B"/>
+
+  <!-- Conical shade (rotated) -->
+  <g transform="rotate(-30, 185, 110)">
+    <!-- Shade outer -->
+    <path d="M155 85 L215 85 L230 130 L140 130 Z" fill="#344B3B"/>
+    <!-- Shade inner (lit face) -->
+    <path d="M158 87 L212 87 L226 128 L144 128 Z" fill="#B96F51" opacity="0.7"/>
+    <!-- Shade rim -->
+    <ellipse cx="185" cy="128" rx="43" ry="8" fill="#2d3a2f"/>
+    <ellipse cx="185" cy="126" rx="43" ry="8" fill="#344B3B"/>
+    <!-- LED strip inside shade -->
+    <ellipse cx="185" cy="88" rx="28" ry="5" fill="#F5F2EA" opacity="0.9"/>
+    <ellipse cx="185" cy="88" rx="22" ry="3.5" fill="#F5F2EA"/>
+    <!-- Light cone emanating -->
+    <path d="M158 130 L100 220 L270 220 L212 130 Z" fill="#F5F2EA" opacity="0.06"/>
+  </g>
+
+  <!-- Power button on arm -->
+  <circle cx="224" cy="174" r="7" fill="#242923"/>
+  <circle cx="224" cy="174" r="5" fill="#344B3B"/>
+  <circle cx="224" cy="174" r="2" fill="#B96F51"/>
+
+  <!-- USB charging port on base side -->
+  <rect x="225" y="332" width="14" height="8" rx="2" fill="#242923"/>
+  <rect x="227" y="334" width="10" height="4" rx="2" fill="#1a2219"/>
+</svg>

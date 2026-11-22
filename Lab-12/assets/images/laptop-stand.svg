@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#F5F2EA"/>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="318" rx="110" ry="14" fill="#242923" opacity="0.12"/>
+
+  <!-- Base platform -->
+  <rect x="100" y="306" width="200" height="12" rx="4" fill="#344B3B"/>
+  <rect x="102" y="305" width="196" height="8" rx="3" fill="#85866B"/>
+  <!-- Anti-slip pads on base -->
+  <rect x="112" y="313" width="20" height="4" rx="2" fill="#242923" opacity="0.3"/>
+  <rect x="268" y="313" width="20" height="4" rx="2" fill="#242923" opacity="0.3"/>
+
+  <!-- Left leg -->
+  <path d="M130 306 L160 180 L170 180 L142 306 Z" fill="#85866B"/>
+  <path d="M131 306 L161 180 L163 180 L133 306 Z" fill="#B96F51" opacity="0.4"/>
+
+  <!-- Right leg -->
+  <path d="M270 306 L240 180 L230 180 L258 306 Z" fill="#85866B"/>
+  <path d="M269 306 L239 180 L241 180 L271 306 Z" fill="#B96F51" opacity="0.4"/>
+
+  <!-- Cross brace -->
+  <path d="M148 260 L252 260 L248 250 L144 250 Z" fill="#344B3B"/>
+  <rect x="145" y="251" width="110" height="8" rx="2" fill="#3d5745"/>
+
+  <!-- Top platform (where laptop rests) -->
+  <path d="M148 170 L252 170 L258 182 L142 182 Z" fill="#344B3B"/>
+  <rect x="148" y="170" width="104" height="12" rx="3" fill="#85866B"/>
+  <!-- Silicone grip strips on top -->
+  <rect x="155" y="171" width="90" height="4" rx="2" fill="#B96F51" opacity="0.6"/>
+  <rect x="155" y="176" width="90" height="2" rx="1" fill="#242923" opacity="0.15"/>
+
+  <!-- Rubber lip at top to hold laptop -->
+  <rect x="150" y="168" width="100" height="6" rx="3" fill="#242923"/>
+  <rect x="152" y="169" width="96" height="4" rx="2" fill="#344B3B"/>
+
+  <!-- Hinge knobs / adjustment screws -->
+  <circle cx="162" cy="181" r="6" fill="#242923"/>
+  <circle cx="162" cy="181" r="4" fill="#85866B"/>
+  <circle cx="162" cy="181" r="2" fill="#242923"/>
+
+  <circle cx="238" cy="181" r="6" fill="#242923"/>
+  <circle cx="238" cy="181" r="4" fill="#85866B"/>
+  <circle cx="238" cy="181" r="2" fill="#242923"/>
+
+  <!-- Height indicators / branding strip -->
+  <rect x="192" y="255" width="16" height="3" rx="1" fill="#B96F51" opacity="0.6"/>
+</svg>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#F5F2EA"/>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="308" rx="145" ry="16" fill="#242923" opacity="0.13"/>
+
+  <!-- Keyboard body base (perspective) -->
+  <path d="M50 290 L60 240 L340 240 L350 290 Z" fill="#242923"/>
+  <!-- Keyboard body top face -->
+  <rect x="58" y="195" width="284" height="48" rx="6" fill="#344B3B"/>
+  <!-- Keyboard body slight top bevel -->
+  <rect x="60" y="193" width="280" height="50" rx="6" fill="#2d3a2f"/>
+  <!-- Main key area surface -->
+  <rect x="68" y="200" width="264" height="38" rx="4" fill="#344B3B"/>
+
+  <!-- Function row keys (small) -->
+  <g fill="#242923" opacity="0.9">
+    <!-- F-row: 12 keys + Esc -->
+    <rect x="72" y="203" width="14" height="10" rx="2" fill="#85866B"/>
+    <rect x="90" y="203" width="14" height="10" rx="2"/>
+    <rect x="106" y="203" width="14" height="10" rx="2"/>
+    <rect x="122" y="203" width="14" height="10" rx="2"/>
+    <rect x="138" y="203" width="14" height="10" rx="2"/>
+    <rect x="158" y="203" width="14" height="10" rx="2"/>
+    <rect x="174" y="203" width="14" height="10" rx="2"/>
+    <rect x="190" y="203" width="14" height="10" rx="2"/>
+    <rect x="210" y="203" width="14" height="10" rx="2"/>
+    <rect x="226" y="203" width="14" height="10" rx="2"/>
+    <rect x="242" y="203" width="14" height="10" rx="2"/>
+    <rect x="258" y="203" width="14" height="10" rx="2"/>
+    <rect x="276" y="203" width="14" height="10" rx="2"/>
+    <rect x="300" y="203" width="14" height="10" rx="2"/>
+    <rect x="316" y="203" width="14" height="10" rx="2"/>
+  </g>
+
+  <!-- Number row keys -->
+  <g fill="#242923" opacity="0.9">
+    <rect x="72" y="217" width="14" height="12" rx="2" fill="#B96F51"/>
+    <rect x="88" y="217" width="14" height="12" rx="2"/>
+    <rect x="104" y="217" width="14" height="12" rx="2"/>
+    <rect x="120" y="217" width="14" height="12" rx="2"/>
+    <rect x="136" y="217" width="14" height="12" rx="2"/>
+    <rect x="152" y="217" width="14" height="12" rx="2"/>
+    <rect x="168" y="217" width="14" height="12" rx="2"/>
+    <rect x="184" y="217" width="14" height="12" rx="2"/>
+    <rect x="200" y="217" width="14" height="12" rx="2"/>
+    <rect x="216" y="217" width="14" height="12" rx="2"/>
+    <rect x="232" y="217" width="14" height="12" rx="2"/>
+    <rect x="248" y="217" width="14" height="12" rx="2"/>
+    <rect x="264" y="217" width="14" height="12" rx="2"/>
+    <rect x="280" y="217" width="22" height="12" rx="2"/>
+    <!-- Del / ins cluster -->
+    <rect x="308" y="217" width="14" height="12" rx="2" fill="#344B3B"/>
+    <rect x="324" y="217" width="14" height="12" rx="2" fill="#344B3B"/>
+  </g>
+
+  <!-- QWERTY row -->
+  <g fill="#242923" opacity="0.9">
+    <rect x="72" y="232" width="20" height="12" rx="2" fill="#85866B"/>
+    <rect x="94" y="232" width="14" height="12" rx="2"/>
+    <rect x="110" y="232" width="14" height="12" rx="2"/>
+    <rect x="126" y="232" width="14" height="12" rx="2"/>
+    <rect x="142" y="232" width="14" height="12" rx="2"/>
+    <rect x="158" y="232" width="14" height="12" rx="2"/>
+    <rect x="174" y="232" width="14" height="12" rx="2"/>
+    <rect x="190" y="232" width="14" height="12" rx="2"/>
+    <rect x="206" y="232" width="14" height="12" rx="2"/>
+    <rect x="222" y="232" width="14" height="12" rx="2"/>
+    <rect x="238" y="232" width="14" height="12" rx="2"/>
+    <rect x="254" y="232" width="14" height="12" rx="2"/>
+    <rect x="270" y="232" width="14" height="12" rx="2"/>
+    <rect x="286" y="232" width="22" height="12" rx="2" fill="#85866B"/>
+    <rect x="310" y="232" width="14" height="12" rx="2" fill="#344B3B"/>
+  </g>
+
+  <!-- Key highlights (tops of keycaps, 3D effect) -->
+  <g fill="#3d5745" opacity="0.6">
+    <rect x="73" y="204" width="12" height="8" rx="1.5"/>
+    <rect x="91" y="204" width="12" height="8" rx="1.5"/>
+    <rect x="107" y="204" width="12" height="8" rx="1.5"/>
+    <rect x="73" y="218" width="12" height="10" rx="1.5"/>
+    <rect x="89" y="218" width="12" height="10" rx="1.5"/>
+  </g>
+
+  <!-- USB-C cable port on back -->
+  <rect x="192" y="240" width="16" height="4" rx="2" fill="#242923"/>
+
+  <!-- Keyboard front edge -->
+  <rect x="58" y="285" width="284" height="8" rx="3" fill="#1a2219"/>
+
+  <!-- Rubber feet -->
+  <rect x="80" y="291" width="16" height="4" rx="2" fill="#85866B" opacity="0.5"/>
+  <rect x="304" y="291" width="16" height="4" rx="2" fill="#85866B" opacity="0.5"/>
+</svg>

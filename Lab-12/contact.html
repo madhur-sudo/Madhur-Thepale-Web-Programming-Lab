@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Morrow Supply</title>
+  <meta name="description" content="Get in touch with the Morrow Supply team. We read every message." />
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="stylesheet" href="./css/style.css?v=2" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+
+      <a href="./index.html" class="nav-logo" aria-label="Morrow Supply home">
+        <span class="logo-name">MORROW SUPPLY</span>
+        <span class="logo-tagline">Useful things. Chosen well.</span>
+      </a>
+
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="./index.html" class="nav-link">Home</a></li>
+        <li><a href="./shop.html" class="nav-link">Shop</a></li>
+        <li><a href="./about.html" class="nav-link">About</a></li>
+        <li><a href="./contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <form class="nav-search" role="search" action="./shop.html" method="get">
+        <label for="nav-search-input" class="sr-only">Search products</label>
+        <input type="search" id="nav-search-input" name="q" class="nav-search-input" placeholder="Search products…" autocomplete="off" />
+        <button type="submit" class="nav-search-btn" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </form>
+
+      <a href="./cart.html" class="nav-cart" aria-label="View cart">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M2 2h2l2.4 10.8a1 1 0 0 0 1 .7h8.2a1 1 0 0 0 1-.8L18 7H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="8" cy="17" r="1" fill="currentColor"/>
+          <circle cx="15" cy="17" r="1" fill="currentColor"/>
+        </svg>
+        <span class="cart-count" id="cart-count" hidden>0</span>
+      </a>
+
+      <button class="nav-hamburger" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero-eyebrow">Get in touch</p>
+      <h1 class="page-hero-title">Contact Us</h1>
+      <p class="page-hero-sub">We're a small team and we read every message.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="contact-main container" id="main-content">
+
+    <!-- FORM COLUMN -->
+    <section class="contact-form-col" aria-labelledby="form-heading">
+      <h2 id="form-heading" class="contact-col-heading">Send us a message</h2>
+
+      <!-- Success state (hidden until valid submit) -->
+      <div class="contact-success" id="contact-success" role="alert" aria-live="polite" hidden>
+        <div class="success-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <h3 class="success-heading">Thanks for getting in touch</h3>
+        <p class="success-body">Your details passed the form check. This demo does not send messages.</p>
+        <button class="btn btn-secondary" id="reset-btn" type="button">Send another message</button>
+      </div>
+
+      <!-- Contact form -->
+      <form class="contact-form" id="contact-form" novalidate>
+
+        <!-- Full Name -->
+        <div class="form-group" id="group-name">
+          <label class="form-label" for="contact-name">
+            Full Name <span class="required-mark" aria-hidden="true">*</span>
+          </label>
+          <input
+            class="form-input"
+            type="text"
+            id="contact-name"
+            name="name"
+            autocomplete="name"
+            placeholder="e.g. Priya Sharma"
+            required
+            aria-describedby="error-name"
+          />
+          <span class="form-error" id="error-name" role="alert" aria-live="polite"></span>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group" id="group-email">
+          <label class="form-label" for="contact-email">
+            Email Address <span class="required-mark" aria-hidden="true">*</span>
+          </label>
+          <input
+            class="form-input"
+            type="email"
+            id="contact-email"
+            name="email"
+            autocomplete="email"
+            placeholder="e.g. priya@example.com"
+            required
+            aria-describedby="error-email"
+          />
+          <span class="form-error" id="error-email" role="alert" aria-live="polite"></span>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group" id="group-message">
+          <label class="form-label" for="contact-message">
+            Message <span class="required-mark" aria-hidden="true">*</span>
+          </label>
+          <textarea
+            class="form-input form-textarea"
+            id="contact-message"
+            name="message"
+            rows="6"
+            placeholder="Write your message here (at least 10 characters)…"
+            required
+            aria-describedby="error-message"
+          ></textarea>
+          <span class="form-error" id="error-message" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <p class="form-disclaimer">
+            This is a demonstration form. Messages are not sent.
+          </p>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- INFO COLUMN -->
+    <aside class="contact-info-col" aria-labelledby="info-heading">
+      <h2 id="info-heading" class="contact-col-heading">Our details</h2>
+
+      <div class="contact-info-card">
+        <div class="info-block">
+          <div class="info-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div class="info-content">
+            <span class="info-label">Email</span>
+            <a href="mailto:hello@morrowsupply.in" class="info-value info-link">hello@morrowsupply.in</a>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div class="info-content">
+            <span class="info-label">Support Hours</span>
+            <span class="info-value">Monday – Saturday</span>
+            <span class="info-value">10 am – 6 pm IST</span>
+          </div>
+        </div>
+
+        <div class="info-note">
+          <p>"We're a small team and we read every message. Expect a thoughtful reply, not a template."</p>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <div class="footer-col footer-brand">
+        <span class="footer-logo">MORROW SUPPLY</span>
+        <p class="footer-tagline">Useful things. Chosen well.</p>
+        <p class="footer-blurb">
+          Quality workspace and tech accessories for everyday use in India.
+          Shipped from Bengaluru.
+        </p>
+      </div>
+
+      <nav class="footer-col footer-links" aria-label="Footer navigation">
+        <h3 class="footer-heading">Navigate</h3>
+        <ul role="list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./cart.html">Cart</a></li>
+        </ul>
+      </nav>
+
+      <address class="footer-col footer-contact">
+        <h3 class="footer-heading">Get in touch</h3>
+        <ul role="list">
+          <li>
+            <a href="mailto:hello@morrowsupply.in">hello@morrowsupply.in</a>
+          </li>
+          <li>Monday – Friday, 10am – 6pm IST</li>
+          <li>Bengaluru, Karnataka</li>
+        </ul>
+      </address>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Morrow Supply. All prices in Indian Rupees (₹).</p>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+
+  <!-- INLINE CONTACT FORM VALIDATION -->
+  <script>
+    (function () {
+      'use strict';
+
+      const form        = document.getElementById('contact-form');
+      const successBox  = document.getElementById('contact-success');
+      const resetBtn    = document.getElementById('reset-btn');
+
+      const fields = {
+        name:    { input: document.getElementById('contact-name'),    error: document.getElementById('error-name')    },
+        email:   { input: document.getElementById('contact-email'),   error: document.getElementById('error-email')   },
+        message: { input: document.getElementById('contact-message'), error: document.getElementById('error-message') }
+      };
+
+      // ── Validators ──────────────────────────────────────────────────────────
+
+      function isValidEmail(value) {
+        // RFC-ish pattern — good enough for a contact form
+        return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value.trim());
+      }
+
+      function validateField(key) {
+        const { input, error } = fields[key];
+        const value = input.value;
+        let message = '';
+
+        if (key === 'name') {
+          if (!value.trim()) message = 'Please enter your full name.';
+        } else if (key === 'email') {
+          if (!value.trim()) {
+            message = 'Please enter your email address.';
+          } else if (!isValidEmail(value)) {
+            message = 'Please enter a valid email address (e.g. name@example.com).';
+          }
+        } else if (key === 'message') {
+          if (!value.trim()) {
+            message = 'Please write a message before sending.';
+          } else if (value.trim().length < 10) {
+            message = 'Your message must be at least 10 characters long.';
+          }
+        }
+
+        setError(key, message);
+        return message === '';
+      }
+
+      function setError(key, message) {
+        const { input, error } = fields[key];
+        const group = document.getElementById('group-' + key);
+
+        error.textContent = message;
+
+        if (message) {
+          input.setAttribute('aria-invalid', 'true');
+          group.classList.add('has-error');
+        } else {
+          input.removeAttribute('aria-invalid');
+          group.classList.remove('has-error');
+        }
+      }
+
+      // ── Live validation (blur + input after first attempt) ──────────────────
+
+      let submitted = false;
+
+      Object.keys(fields).forEach(function (key) {
+        const { input } = fields[key];
+
+        input.addEventListener('blur', function () {
+          if (submitted) validateField(key);
+        });
+
+        input.addEventListener('input', function () {
+          if (submitted) validateField(key);
+        });
+      });
+
+      // ── Submit ───────────────────────────────────────────────────────────────
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        submitted = true;
+
+        const nameOk    = validateField('name');
+        const emailOk   = validateField('email');
+        const messageOk = validateField('message');
+
+        if (!nameOk || !emailOk || !messageOk) {
+          // Focus first invalid field
+          const firstInvalid = Object.keys(fields).find(function (k) {
+            return fields[k].input.getAttribute('aria-invalid') === 'true';
+          });
+          if (firstInvalid) fields[firstInvalid].input.focus();
+          return;
+        }
+
+        // All valid — show success
+        form.hidden = true;
+        successBox.hidden = false;
+        successBox.focus();
+      });
+
+      // ── Reset ────────────────────────────────────────────────────────────────
+
+      resetBtn.addEventListener('click', function () {
+        form.reset();
+        submitted = false;
+
+        // Clear all errors
+        Object.keys(fields).forEach(function (key) {
+          setError(key, '');
+        });
+
+        successBox.hidden = true;
+        form.hidden = false;
+
+        // Focus first field
+        fields.name.input.focus();
+      });
+
+    }());
+  </script>
+
+</body>
+</html>
